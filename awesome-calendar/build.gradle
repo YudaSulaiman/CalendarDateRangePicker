@@ -4,7 +4,7 @@ apply plugin: "io.gitlab.arturbosch.detekt"
 
 ext {
     PUBLISH_GROUP_ID = 'io.github.architshah248.calendar'
-    PUBLISH_VERSION = '2.0.0'
+    PUBLISH_VERSION = '2.1.0'
     PUBLISH_ARTIFACT_ID = 'awesome-calendar'     // Has to be same as your library module name
     PUBLISH_DESCRIPTION = 'Android library to select range of dates.'
 
