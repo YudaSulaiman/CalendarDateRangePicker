@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.PorterDuff.Mode.SRC_IN
 import android.graphics.PorterDuffColorFilter
 import android.graphics.Typeface
+import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -61,6 +62,7 @@ class CustomDateView @JvmOverloads constructor(
     override var dateTextSize: Float = defCalendarStyleAttr.textSizeDate
     override var defaultDateColor: Int = defCalendarStyleAttr.defaultDateColor
     override var disableDateColor: Int = defCalendarStyleAttr.disableDateColor
+    override var todayDateCircleColor: Int = defCalendarStyleAttr.todayDateCircleColor
     override var selectedDateCircleColor: Int = defCalendarStyleAttr.selectedDateCircleColor
     override var selectedDateColor: Int = defCalendarStyleAttr.selectedDateColor
     override var rangeDateColor: Int = defCalendarStyleAttr.rangeDateColor
@@ -91,6 +93,7 @@ class CustomDateView @JvmOverloads constructor(
         selectedDateCircleColor = attr.selectedDateCircleColor
         selectedDateColor = attr.selectedDateColor
         stripColor = attr.rangeStripColor
+        todayDateCircleColor = attr.todayDateCircleColor
         rangeDateColor = attr.rangeDateColor
         tvDate.textSize = attr.textSizeDate
         refreshLayout()
@@ -121,6 +124,12 @@ class CustomDateView @JvmOverloads constructor(
 
     override fun setDateClickListener(listener: OnDateClickListener) {
         onDateClickListener = listener
+    }
+
+    override fun setTodayDateCircle(date: String) {
+        val mDrawable = ContextCompat.getDrawable(context, drawable.border_circle) as GradientDrawable
+        mDrawable.setStroke(2, todayDateCircleColor)
+        tvDate.background = mDrawable
     }
 
     /**

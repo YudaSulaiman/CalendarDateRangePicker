@@ -23,6 +23,7 @@
             custom:date_selection_mode="free_range"
             custom:disable_date_color="#ABABAB"
             custom:editable="true"
+            custom:today_date_circle_color="@color/selected_date_circle_color_app"
             custom:enable_time_selection="false"
             custom:header_bg="@drawable/calendar_header"
             custom:range_color="@color/range_bg_color_app"

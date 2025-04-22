@@ -37,6 +37,9 @@ interface CalendarStyleAttributes {
     val disableDateColor: Int
 
     @get:ColorInt
+    val todayDateCircleColor: Int
+
+    @get:ColorInt
     val rangeDateColor: Int
     val textSizeTitle: Float
     val textSizeWeek: Float

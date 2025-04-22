@@ -56,6 +56,7 @@ interface DateView {
     var selectedDateColor: Int
     var defaultDateColor: Int
     var disableDateColor: Int
+    var todayDateCircleColor: Int
     var rangeDateColor: Int
 
     fun setDateTag(date: Calendar)
@@ -71,6 +72,8 @@ interface DateView {
     fun refreshLayout()
 
     fun setDateClickListener(listener: OnDateClickListener)
+
+    fun setTodayDateCircle(date: String)
 
     companion object {
 

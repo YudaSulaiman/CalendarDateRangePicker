@@ -28,6 +28,8 @@ class CalendarStyleAttrImpl(context: Context, attributeSet: AttributeSet? = null
         private set
     override var disableDateColor = ContextCompat.getColor(context, R.color.disable_date_color)
         private set
+    override var todayDateCircleColor = ContextCompat.getColor(context, R.color.selected_date_color)
+        private set
     override var rangeDateColor = ContextCompat.getColor(context, R.color.range_date_color)
         private set
     override var textSizeTitle = context.resources.getDimension(R.dimen.text_size_title)
@@ -91,6 +93,7 @@ class CalendarStyleAttrImpl(context: Context, attributeSet: AttributeSet? = null
                 defaultDateColor = ta.getColor(R.styleable.DateRangeMonthView_default_date_color, defaultDateColor)
                 rangeDateColor = ta.getColor(R.styleable.DateRangeMonthView_range_date_color, rangeDateColor)
                 disableDateColor = ta.getColor(R.styleable.DateRangeMonthView_disable_date_color, disableDateColor)
+                todayDateCircleColor = ta.getColor(R.styleable.DateRangeMonthView_today_date_circle_color, todayDateCircleColor)
                 weekOffset = ta.getColor(R.styleable.DateRangeMonthView_week_offset, 0)
                 dateSelectionMode =
                     DateSelectionMode.values()[ta.getInt(R.styleable.DateRangeMonthView_date_selection_mode, 0)]
@@ -124,6 +127,7 @@ class CalendarStyleAttrImpl(context: Context, attributeSet: AttributeSet? = null
             calendarStyleAttr.defaultDateColor = ContextCompat.getColor(context, R.color.default_date_color)
             calendarStyleAttr.rangeDateColor = ContextCompat.getColor(context, R.color.range_date_color)
             calendarStyleAttr.disableDateColor = ContextCompat.getColor(context, R.color.disable_date_color)
+            calendarStyleAttr.todayDateCircleColor = ContextCompat.getColor(context, R.color.selected_date_color)
             return calendarStyleAttr
         }
     }
