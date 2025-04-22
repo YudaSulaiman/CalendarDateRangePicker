@@ -80,6 +80,7 @@ For Maven:
 | default_date_color         | Color     | Default date text color                 |
 | range_date_color           | Color     | Date text color when it falls into range |
 | disable_date_color         | Color     | Disable date color                 |
+| today_date_circle_color    | Color     | Today circle color, use selected_date_color otherwise     |
 | enable_time_selection      | Boolean   | true to enable time selection else false    |
 | text_size_title            | Dimension | Title size                         |
 | text_size_week             | Dimension | Week text size                     |
